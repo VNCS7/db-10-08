@@ -16,7 +16,7 @@ public class AlunosJdbcDAO {
 	}
 
 	public void salvar(Alunos c) throws SQLException {
-		String sql = "insert into aluno (nome,endereco,bairro,idCurso) values ('"+c.getNome()+"','"+c.getBairro()+"','"+c.getEndereco()+"','"+c.getIdCurso()+"')";
+		String sql = "insert into aluno (nome,endereco,bairro,idCurso) values ('"+c.getNome()+"','"+c.getEndereco()+"','"+c.getBairro()+"','"+c.getIdCurso()+"')";
 		System.out.println(sql);
 		PreparedStatement prepareStatement = this.conn.prepareStatement(sql);
 		prepareStatement.executeUpdate();
@@ -42,15 +42,14 @@ public class AlunosJdbcDAO {
 		}		
 	}
 	public List<Alunos> listar() throws SQLException{
-		String sql = "select * from alunos";
+		String sql = "select * from aluno";
         System.out.println(sql);		
         List<Alunos> alunos = new ArrayList<Alunos>();
 		try {
 			PreparedStatement prepareStatement = this.conn.prepareStatement(sql);
 			ResultSet rs = prepareStatement.executeQuery();
 			while(rs.next()) {
-				//System.out.println(rs.getInt("id")+" "+rs.getString("nome")+" "+rs.getString("endereco")+" "+rs.getString("bairro")+" ");
-				System.out.println("\nID: "+rs.getInt("id")+"|NOME: "+rs.getString("nome")+"\t|ENDEREÇO: "+rs.getString("endereco")+"\t|BAIRRO: "+rs.getString("bairro")+"|\t|ID CURSO: "+rs.getInt("idCurso"));
+				System.out.println("\nID: "+rs.getInt("idAluno")+"|NOME: "+rs.getString("nome")+"\t|ENDEREÇO: "+rs.getString("endereco")+"\t|BAIRRO: "+rs.getString("bairro")+"|\t|ID CURSO: "+rs.getInt("idCurso"));
 				}
 
 			prepareStatement.close();

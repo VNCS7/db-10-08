@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 11-Ago-2018 às 01:41
--- Versão do servidor: 5.7.17
+-- Generation Time: Aug 12, 2018 at 07:38 PM
+-- Server version: 5.7.17
 -- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `aluno`
+-- Table structure for table `aluno`
 --
 
 CREATE TABLE `aluno` (
@@ -39,7 +39,7 @@ CREATE TABLE `aluno` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `curso`
+-- Table structure for table `curso`
 --
 
 CREATE TABLE `curso` (
@@ -51,7 +51,7 @@ CREATE TABLE `curso` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `disciplina`
+-- Table structure for table `disciplina`
 --
 
 CREATE TABLE `disciplina` (
@@ -63,7 +63,7 @@ CREATE TABLE `disciplina` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `professor`
+-- Table structure for table `professor`
 --
 
 CREATE TABLE `professor` (
@@ -72,7 +72,7 @@ CREATE TABLE `professor` (
   `endereco` varchar(200) NOT NULL,
   `bairro` varchar(200) NOT NULL,
   `idCurso` int(11) NOT NULL,
-  `disciplina` varchar(200) NOT NULL
+  `idDisciplina` varchar(200) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -111,22 +111,22 @@ ALTER TABLE `professor`
 -- AUTO_INCREMENT for table `aluno`
 --
 ALTER TABLE `aluno`
-  MODIFY `idAluno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idAluno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `curso`
 --
 ALTER TABLE `curso`
-  MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `disciplina`
 --
 ALTER TABLE `disciplina`
-  MODIFY `idDisciplina` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idDisciplina` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `professor`
 --
 ALTER TABLE `professor`
-  MODIFY `idProfessor` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `idProfessor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

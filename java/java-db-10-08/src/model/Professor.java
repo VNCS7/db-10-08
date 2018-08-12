@@ -6,8 +6,20 @@ public class Professor {
 	private String endereco = "";
 	private String bairro = "";
 	private int idCurso = 0;
-	private String disciplina = "";
+	private int idDisciplina = 0;
 	
+	public int getIdCurso() {
+		return idCurso;
+	}
+	public void setIdCurso(int idCurso) {
+		this.idCurso = idCurso;
+	}
+	public int getIdDisciplina() {
+		return idDisciplina;
+	}
+	public void setIdDisciplina(int idDisciplina) {
+		this.idDisciplina = idDisciplina;
+	}
 	public int getIdProfessor() {
 		return idProfessor;
 	}
@@ -33,12 +45,6 @@ public class Professor {
 		this.bairro = bairro;
 	}
 
-	public String getDisciplina() {
-		return disciplina;
-	}
-	public void setDisciplina(String disciplina) {
-		this.disciplina = disciplina;
-	}
 
 
 }
